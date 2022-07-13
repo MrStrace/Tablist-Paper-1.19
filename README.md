@@ -2,7 +2,7 @@
 A Tablist "Manager" to create awsome looking and Animated Tablist.
 
 
-First you need to create a manager in the onEnable method.
+<h3>1) First you need to create a manager in the onEnable method.</h3><br>
     
     private TablistManager manager;
 
@@ -13,14 +13,11 @@ First you need to create a manager in the onEnable method.
     }
 
 
-After you created the manager, you can now use it to decorate the Tablist.
+<h3>2) After you created the manager, you can now use it to decorate the Tablist.</h3>
+<br>
 
-
-    
-    
-  Variant #1 One Line.
- 
-  manager.nl is equal to "\n" which says newline basically.
+  <b>Variant #1 One Line. </b>
+  -> manager.nl is equal to "\n" which says newline basically.
     
     private void registerTablist() {
 
@@ -34,7 +31,7 @@ After you created the manager, you can now use it to decorate the Tablist.
     }
 
     
-  Variant #2 String[].
+   <b>Variant #2 String[]</b>
     
     private void registerTablist2() {
 
@@ -55,7 +52,7 @@ After you created the manager, you can now use it to decorate the Tablist.
     }
 
     
-  Variant #3 List/ArrayList
+   <b>Variant #3 List/ArrayList</b>
   Personal Favourite (Looks the cleanest).
     
     private void registerTablist3() {

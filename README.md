@@ -1,5 +1,21 @@
 # Tablist-Paper-1.19
 A Tablist "Manager" to create awsome looking and Animated Tablist.
+
+<div class="init">
+    First you need to create a manager in the onEnable method.
+    <div class="code">
+private TablistManager manager;
+
+    @Override
+    public void onEnable() {
+        manager = new TablistManager(this);
+        registerTablist(); // Ways to create this scroll further down.
+    }
+    </div>
+</div>
+
+After you created the manager, you can now use it to decorate the Tablist.
+
 <div class="code">
     
     /*

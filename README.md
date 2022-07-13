@@ -71,3 +71,10 @@ A Tablist "Manager" to create awsome looking and Animated Tablist.
         manager.addFooter(foot);
         manager.showTab();
     }
+<h3>3) You may want to set the Animation speed and delay.</h3>
+<br>
+        
+        manager.setSpeed(40);
+        manager.setDelay(0);
+        
+Well this is it. Enjoy.

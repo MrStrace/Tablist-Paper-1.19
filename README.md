@@ -19,6 +19,7 @@ After you created the manager, you can now use it to decorate the Tablist.
     
     
   Variant #1 One Line.
+  manager.nl is equal to "\n" which says newline basically.
     
     private void registerTablist() {
 

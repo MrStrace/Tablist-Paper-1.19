@@ -1,16 +1,21 @@
-package dev.strace.tablist;
+package dev.strac.prettytwex.manager;
 
+import dev.strac.prettytwex.Main;
+import dev.strac.prettytwex.utils.Format;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.ComponentLike;
 import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TablistManager {
     private Main instance;
-    private List<TextComponent> headers = new ArrayList<>();
-    private List<TextComponent> footers = new ArrayList<>();
+    private List<String> headers = new ArrayList<>();
+    private List<String> footers = new ArrayList<>();
     public final String nl = "\n"; // NEW LINE
 
     //Settings
@@ -37,8 +42,8 @@ public class TablistManager {
                     count2 = 0;
                 for (Player p : Bukkit.getOnlinePlayers()) {
 
-                    p.sendPlayerListHeader(headers.get(count));
-                    p.sendPlayerListFooter(footers.get(count2));
+                    p.sendPlayerListHeader(Format.format(headers.get(count).replace("[online]", ""+Bukkit.getOnlinePlayers().size())));
+                    p.sendPlayerListFooter(Format.format(footers.get(count2).replace("[online]", ""+Bukkit.getOnlinePlayers().size())));
 
                 }
                 count++;
@@ -49,38 +54,68 @@ public class TablistManager {
 
     /**
      * Adds an Headertext to the Animation.
+     *
      * @param text
      */
     public void addHeader(String text) {
-        headers.add(Format.format(text));
+        headers.add(text);
     }
 
     /**
      * Adds an Footertext to the Animation.
+     *
      * @param text
      */
     public void addFooter(String text) {
-        footers.add(Format.format(text));
+        footers.add(text);
     }
 
     public void addHeader(String[] text) {
-        for (String x : text)
-            headers.add(Format.format(x + nl));
+        StringBuilder builder = new StringBuilder();
+        int i = 0;
+        for (String x : text) {
+            i++;
+            if (text.length >= i)
+                builder.append(x + nl);
+            else builder.append(x);
+        }
+            headers.add(builder.toString());
     }
 
     public void addHeader(List<String> text) {
-        for (String x : text)
-            headers.add(Format.format(x + nl));
+        StringBuilder builder = new StringBuilder();
+        int i = 0;
+        for (String x : text) {
+            i++;
+            if (text.size() > i)
+                builder.append(x + nl);
+            else builder.append(x);
+        }
+        headers.add(builder.toString());
     }
 
     public void addFooter(String[] text) {
-        for (String x : text)
-            footers.add(Format.format(x + nl));
+        StringBuilder builder = new StringBuilder();
+        int i = 0;
+        for (String x : text) {
+            i++;
+            if (text.length >= i)
+                builder.append(x + nl);
+            else builder.append(x);
+        }
+        footers.add(builder.toString());
     }
 
     public void addFooter(List<String> text) {
-        for (String x : text)
-            footers.add(Format.format(x + nl));
+        StringBuilder builder = new StringBuilder();
+        int i = 0;
+        for (String x : text) {
+            i++;
+            if (text.size() > i)
+                builder.append(x + nl);
+            else builder.append(x);
+        }
+        footers.add(builder.toString());
     }
 
     /**

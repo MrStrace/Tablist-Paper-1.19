@@ -88,6 +88,7 @@ A Tablist "Manager" to create awsome looking and Animated Tablist.
        
 <h3>4) Enable Animation and show the Tablist.</h3>
 <br>
+
         manager.showTab();
         
 Well this is it. Enjoy.

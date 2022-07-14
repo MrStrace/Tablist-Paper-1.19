@@ -26,7 +26,6 @@ A Tablist "Manager" to create awsome looking and Animated Tablist.
         manager.addHeader("&e&lTwexMC" + manager.nl + "&7Online: &6" + "[online]" + " Spieler" + manager.nl + "");
         manager.addFooter("" + manager.nl + "&6Game: &e" + "[game]" + "  " + "&6Coins: &e" + 0 + manager.nl + "&7Have Fun!!");
         manager.addFooter("" + manager.nl + "&eGame: &6" + "[game]" + "  " + "&eCoins: &6" + 0 + manager.nl + "&7Have Fun!");
-        manager.showTab();
 
     }
 
@@ -48,7 +47,6 @@ A Tablist "Manager" to create awsome looking and Animated Tablist.
         };
         manager.addHeader(head);
         manager.addFooter(foot);
-        manager.showTab();
     }
 
     
@@ -81,12 +79,15 @@ A Tablist "Manager" to create awsome looking and Animated Tablist.
         manager.addHeader(head2);
         manager.addFooter(foot);
         manager.addFooter(foot2);
-        manager.showTab();
     }
 <h3>3) You may want to set the Animation speed and delay.</h3>
 <br>
         
         manager.setSpeed(40);
         manager.setDelay(0);
+       
+<h3>4) Enable Animation and show the Tablist.</h3>
+<br>
+        manager.showTab();
         
 Well this is it. Enjoy.
